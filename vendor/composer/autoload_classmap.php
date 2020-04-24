@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Admin' => $baseDir . '/app/Models/Admin.php',
+    'App\\Console\\Commands\\InstallDatabase' => $baseDir . '/app/Console/Commands/InstallDatabase.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Frequency' => $baseDir . '/app/Models/Frequency.php',
@@ -15,6 +16,7 @@ return array(
     'App\\Http\\Controllers\\FrequencyController' => $baseDir . '/app/Http/Controllers/FrequencyController.php',
     'App\\Http\\Controllers\\PaymentStatusController' => $baseDir . '/app/Http/Controllers/PaymentStatusController.php',
     'App\\Http\\Controllers\\PlanController' => $baseDir . '/app/Http/Controllers/PlanController.php',
+    'App\\Http\\Controllers\\PlanTypeController' => $baseDir . '/app/Http/Controllers/PlanTypeController.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/app/Http/Controllers/UserController.php',
     'App\\Http\\Controllers\\UserEntranceController' => $baseDir . '/app/Http/Controllers/UserEntranceController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -27,6 +29,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\PaymentStatus' => $baseDir . '/app/Models/PaymentStatus.php',
     'App\\Plan' => $baseDir . '/app/Models/Plan.php',
+    'App\\PlanType' => $baseDir . '/app/PlanType.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
