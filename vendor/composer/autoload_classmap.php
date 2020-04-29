@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Admin' => $baseDir . '/app/Models/Admin.php',
     'App\\Console\\Commands\\InstallDatabase' => $baseDir . '/app/Console/Commands/InstallDatabase.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -29,7 +28,7 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\PaymentStatus' => $baseDir . '/app/Models/PaymentStatus.php',
     'App\\Plan' => $baseDir . '/app/Models/Plan.php',
-    'App\\PlanType' => $baseDir . '/app/PlanType.php',
+    'App\\PlanType' => $baseDir . '/app/Models/PlanType.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
