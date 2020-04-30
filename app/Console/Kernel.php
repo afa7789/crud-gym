@@ -12,9 +12,7 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [
-        'App\Console\Commands\InstallDatabase',
-    ];
+    protected $commands = [];
 
     /**
      * Define the application's command schedule.

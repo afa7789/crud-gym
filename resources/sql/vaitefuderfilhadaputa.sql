@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS forge;
+CREATE USER forge@localhost IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON forge.* TO forge@localhost;
