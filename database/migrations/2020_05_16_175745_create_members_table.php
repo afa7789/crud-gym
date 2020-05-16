@@ -28,6 +28,7 @@ class CreateMembersTable extends Migration
             $table->string('instagram',100)->nullable();
             $table->string('twitter',100)->nullable();
             $table->string('facebook',100)->nullable();
+            $table->binary('image')->nullable();//   <img src="data:image/jpeg;base64,'.base64_encode( $imageBlob ).'"/>
         });
     }
 
