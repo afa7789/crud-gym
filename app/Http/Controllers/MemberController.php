@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Member;
 
-class UserController extends Controller
+class MemberController extends Controller
 {
     /**
      * Eloquent Laravel Database with Model
@@ -15,8 +15,8 @@ class UserController extends Controller
     public function ListUser()
     {
 
-        $users = User::all();
+        $members = Member::all();
 
-        return $users;
+        return $members;
     }
 }
