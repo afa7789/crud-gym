@@ -19,15 +19,15 @@ class CreateMembersTable extends Migration
             $table->primary('merbers_id');
             $table->string('email',100)->unique();
             $table->string('name',100);
+            $table->date('birth_date');
             $table->text('password');
             $table->string('phone_number',15);
-            $table->string('social_id');
-            $table->text('address');
-            $table->text('description');
+            $table->string('social_id')->nullable();;
+            $table->text('address')->nullable();;
+            $table->text('description')->nullable();;
             $table->string('instagram',100)->nullable();
             $table->string('twitter',100)->nullable();
             $table->string('facebook',100)->nullable();
-            $table->date('birth_date');
         });
     }
 
