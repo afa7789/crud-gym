@@ -24,10 +24,9 @@ class CreateMembersTable extends Migration
             $table->string('social_id');
             $table->text('address');
             $table->text('description');
-            $table->string('instagram',100);
-            $table->string('twitter',100);
-            $table->string('facebook',100);
-            $table->string('facebook',100);
+            $table->string('instagram',100)->nullable();
+            $table->string('twitter',100)->nullable();
+            $table->string('facebook',100)->nullable();
             $table->date('birth_date');
         });
     }
