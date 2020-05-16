@@ -15,19 +15,19 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->timestamps();
-            $table->id('members_id');
-            $table->primary('merbers_id');
+            $table->id('id');
+            $table->primary('id');
+            $table->string('social_id')->unique();
             $table->string('email',100)->unique();
             $table->string('name',100);
             $table->date('birth_date');
             $table->text('password');
             $table->string('phone_number',15);
-            $table->string('social_id')->nullable();;
-            $table->text('address')->nullable();;
-            $table->text('description')->nullable();;
-            $table->string('instagram',100)->nullable();
-            $table->string('twitter',100)->nullable();
-            $table->string('facebook',100)->nullable();
+            $table->text('address')->nullable();
+            $table->text('description')->nullable();
+            $table->string('instagram',50)->nullable();
+            $table->string('twitter',50)->nullable();
+            $table->string('facebook',50)->nullable();
             $table->binary('image')->nullable();//   <img src="data:image/jpeg;base64,'.base64_encode( $imageBlob ).'"/>
         });
     }
