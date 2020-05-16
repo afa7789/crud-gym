@@ -1,3 +1,4 @@
+
 DROP TABLE IF EXISTS 'tipo_plano'
 CREATE TABLE
 IF NOT EXISTS 'tipo_plano'(
