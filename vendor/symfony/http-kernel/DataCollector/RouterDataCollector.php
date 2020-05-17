@@ -52,8 +52,7 @@ class RouterDataCollector extends DataCollector
 
     public function reset()
     {
-        $this->controllers = new \SplObjectStorage();
-
+        $this->controllers = new \SplObjectStorage();
         $this->data = [
             'redirect' => false,
             'url' => null,

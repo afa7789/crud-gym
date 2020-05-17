@@ -12,7 +12,6 @@ class CreateFrequenciesTable extends Migration
      * @return void
      */
     public function up()
-
     {
         Schema::create('frequencies', function (Blueprint $table) {
             $table->id('id');
