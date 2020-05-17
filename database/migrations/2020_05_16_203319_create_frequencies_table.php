@@ -16,7 +16,7 @@ class CreateFrequenciesTable extends Migration
         Schema::create('frequencies', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedBigInteger('member_id');
-            $table->foreign('member_id')->references('id')->on('users');
+            $table->foreign('member_id')->references('id')->on('members');
             $table->timestamps();
             $table->date('date_frequencies')->nullable();
             $table->bigInteger('counter')->nullable();

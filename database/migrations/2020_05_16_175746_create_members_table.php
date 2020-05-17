@@ -16,7 +16,6 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->timestamps();
             $table->id('id');
-            $table->primary('id');
             $table->string('social_id')->unique();
             $table->string('email',100)->unique();
             $table->string('name',100);

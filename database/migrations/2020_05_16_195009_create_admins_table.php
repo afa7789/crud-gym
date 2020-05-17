@@ -15,8 +15,7 @@ class CreateAdminsTable extends Migration
     {
         //$table->string('social_id')->nullable();;
         Schema::create('admins', function (Blueprint $table) {
-            $table->id('admins_id');
-            $table->primary('admins_id');
+            $table->id('id');
             $table->timestamps();
             $table->string('email',100)->nullable();
             $table->string('name',100)->nullable();
