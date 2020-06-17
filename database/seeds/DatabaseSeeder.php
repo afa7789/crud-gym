@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             PaymentStatusSeeder::class,
+            AdminSeeder::class,
+            PlanTypeSeeder::class
         ]);
     }
 }

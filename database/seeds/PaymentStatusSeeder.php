@@ -20,4 +20,5 @@ class PaymentStatusSeeder extends Seeder
         DB::table('payment_statuses')->insert($data);
     }
 }
-}
+
+
