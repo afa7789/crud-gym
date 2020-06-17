@@ -455,6 +455,7 @@ class ComposerStaticInit1a6962e25cc5d33399c6e3fae3e275ad
     );
 
     public static $classMap = array (
+        'AdminSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminSeeder.php',
         'App\\Classudo' => __DIR__ . '/../..' . '/app/Classudo.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -3424,6 +3425,7 @@ class ComposerStaticInit1a6962e25cc5d33399c6e3fae3e275ad
         'PhpParser\\Parser\\Tokens' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Parser/Tokens.php',
         'PhpParser\\PrettyPrinterAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
         'PhpParser\\PrettyPrinter\\Standard' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
+        'PlanTypeSeeder' => __DIR__ . '/../..' . '/database/seeds/PlanTypeSeeder.php',
         'Prophecy\\Argument' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument.php',
         'Prophecy\\Argument\\ArgumentsWildcard' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
         'Prophecy\\Argument\\Token\\AnyValueToken' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',
