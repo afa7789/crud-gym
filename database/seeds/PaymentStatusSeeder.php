@@ -12,9 +12,9 @@ class PaymentStatusSeeder extends Seeder
     public function run()
     {
         $data = [
-            ['name'=> "Pending"],
-            ['name'=> "Completed"],
-            ['name'=> "Ignored"],
+            ['name'=> "Pending" , 'created_at' => date("Y-m-d H:i:s") ],
+            ['name'=> "Completed" ,'created_at' => date("Y-m-d H:i:s") ],
+            ['name'=> "Ignored" , 'created_at' => date("Y-m-d H:i:s") ],
         ];
         
         DB::table('payment_statuses')->insert($data);
