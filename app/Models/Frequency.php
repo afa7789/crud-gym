@@ -7,4 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Frequency extends Model
 {
     protected $table = 'frenquencies';
+    protected $fillable = [
+        'id',
+        'member_id',
+        'date_frequencies',
+        'counter'
+    ];
+    
 }

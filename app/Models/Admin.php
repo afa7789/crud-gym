@@ -8,9 +8,9 @@ class Admin extends Model
 {
     protected $table = 'admins';
     protected $fillable = [
-    'id',
-    'email',
-    'nome',
-    'senha'
+        'id',
+        'email',
+        'name',
+        'password'
     ];
 }
