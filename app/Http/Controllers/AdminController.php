@@ -7,7 +7,6 @@ use App\Models\Admin;
 
 class AdminController extends Controller
 {
-
     /**
      * Eloquent Laravel Database with Model
      * @return  result , querry result with a list of Admins

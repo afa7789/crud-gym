@@ -1,7 +1,8 @@
 <?php
 
 include(__DIR__."/../app/Classudo.php");
-include(__DIR__."/../app/Http/AdminController.php");
+include(__DIR__."/../app/Http/Controllers/Controller.php");
+include(__DIR__."/../app/Http/Controllers/AdminController.php");
 
 $a = new \App\Classudo();
 $a->helloworld();
