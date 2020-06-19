@@ -18,4 +18,9 @@ class AdminController extends Controller
 
         return $admins;
     }
+
+    public function teste(){
+        return "oi";
+    }
+
 }

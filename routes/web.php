@@ -20,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/listadmins', 'AdminController@listAdmins');
+
+Route::get('/teste', 'AdminController@Teste');
