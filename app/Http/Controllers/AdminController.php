@@ -7,16 +7,20 @@ use App\Models\Admin;
 
 class AdminController extends Controller
 {
-
     /**
      * Eloquent Laravel Database with Model
      * @return  result , querry result with a list of Admins
      */
-    public function ListAdmins()
+    public function listAdmins()
     {
 
         $admins = Admin::all();
 
         return $admins;
     }
+
+    public function teste(){
+        return "oi";
+    }
+
 }
