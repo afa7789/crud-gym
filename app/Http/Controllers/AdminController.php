@@ -23,4 +23,9 @@ class AdminController extends Controller
         return "oi";
     }
 
+    public function printatela($str){
+		echo "$str";
+		return $str;
+	}
+
 }
