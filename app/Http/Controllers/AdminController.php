@@ -26,6 +26,15 @@ class AdminController extends Controller
     public function printatela($str){
 		echo "$str";
 		return $str;
-	}
+    }
+    
+    public function deleteAdmin(DeleteFormRequest $request){
+        $admin_number = Admin::count();
+        if($admin_number >= 2){
+
+        }else{
+            return faio
+        }
+    }
 
 }
