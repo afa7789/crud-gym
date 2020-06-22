@@ -13,4 +13,6 @@ class Admin extends Model
         'name',
         'password'
     ];
+
+
 }

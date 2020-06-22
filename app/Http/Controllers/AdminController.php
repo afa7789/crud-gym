@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Resources\AdminResource;
 use App\Models\Admin;
 
 class AdminController extends Controller
@@ -13,19 +14,21 @@ class AdminController extends Controller
      */
     public function listAdmins()
     {
-
         $admins = Admin::all();
 
-        return $admins;
-    }
+        return new AdmimResource([
+            'admins' => $admins
+        ]);
 
-    public function teste(){
-        return "oi";
     }
-
-    public function index(Request $str){
-        
-        return "controller is here";
+ 
+    public function deleteAdmin(DeleteFormRequest $request){
+        $admin_number = Admin::count();
+        if($admin_number >= 2){
+            $model = Admin::where('email',$request->email);
+        }else{
+            return faio
+        }
     }
 
     public function insert(Request $str){
