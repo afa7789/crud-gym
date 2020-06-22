@@ -22,12 +22,7 @@ class AdminController extends Controller
     public function teste(){
         return "oi";
     }
-
-    public function printatela($str){
-		echo "$str";
-		return $str;
-    }
-    
+  
     public function deleteAdmin(DeleteFormRequest $request){
         $admin_number = Admin::count();
         if($admin_number >= 2){
@@ -36,5 +31,13 @@ class AdminController extends Controller
             return faio
         }
     }
+
+    public function insert(Request $str){
+        
+        print_r($str->input('id'));
+
+        return "oi deu certo";
+		
+	}
 
 }
