@@ -27,7 +27,10 @@ class AdminController extends Controller
         if($admin_number >= 2){
             $model = Admin::where('email',$request->email);
         }else{
-            return faio
+            return new AdmimResource([
+                'success'   => false,
+                'message' => 'Can\'t remove Admins , there is only one left'
+            ]);
         }
     }
 
