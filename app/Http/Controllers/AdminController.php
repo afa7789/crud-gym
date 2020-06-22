@@ -13,24 +13,19 @@ class AdminController extends Controller
      */
     public function listAdmins()
     {
-
         $admins = Admin::all();
 
         return $admins;
     }
-
-    public function teste(){
-        return "oi";
-    }
-  
-    public function deleteAdmin(DeleteFormRequest $request){
-        $admin_number = Admin::count();
-        if($admin_number >= 2){
-
-        }else{
-            return faio
-        }
-    }
+ 
+    // public function deleteAdmin(DeleteFormRequest $request){
+    //     $admin_number = Admin::count();
+    //     if($admin_number >= 2){
+    //         $model = Admin::where('email',$request->email);
+    //     }else{
+    //         return faio
+    //     }
+    // }
 
     public function insert(Request $str){
         

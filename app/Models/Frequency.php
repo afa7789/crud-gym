@@ -13,5 +13,11 @@ class Frequency extends Model
         'date_frequencies',
         'counter'
     ];
-    
+
+
+    function listAdmin(){
+        $admins = Admin::all();
+
+        return $admins;
+    }
 }
