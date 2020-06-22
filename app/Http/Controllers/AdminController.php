@@ -23,9 +23,17 @@ class AdminController extends Controller
         return "oi";
     }
 
-    public function printatela($str){
-		echo "$str";
-		return $str;
+    public function index(Request $str){
+        
+        return "controller is here";
+    }
+
+    public function insert(Request $str){
+        
+        print_r($str->input('id'));
+
+        return "oi deu certo";
+		
 	}
 
 }
