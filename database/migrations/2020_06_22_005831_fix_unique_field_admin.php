@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FixUniqueFielAdmin extends Migration
+class FixUniqueFieldAdmin extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,7 @@ class FixUniqueFielAdmin extends Migration
     {
         Schema::table('admins', function($table)
         {
-            $table->string('email')->unique();
+            $table->string('email')->unique()->change();
         });
     }
 
@@ -28,3 +28,5 @@ class FixUniqueFielAdmin extends Migration
         //
     }
 }
+
+

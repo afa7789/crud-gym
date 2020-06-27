@@ -22,21 +22,21 @@ class AdminController extends Controller
             'message' => 'Listing Admins',
             'admins' => $admins
         ]);
-
     }
- 
-    public function deleteAdmin(DeleteAdminFormRequest $request){
+
+    public function deleteAdmin(DeleteAdminFormRequest $request)
+    {
         $admin_number = Admin::count();
-        if($admin_number >= 2){
-            $delete_result = Admin::where('email',$request->email)->delete(); // Deve retornar um número;
-            if($delete_result > 0){
+        if ($admin_number >= 2) {
+            $delete_result = Admin::where('email', $request->email)->delete(); // Deve retornar um número;
+            if ($delete_result > 0) {
                 return new AdminResource([
                     'success'   => true,
                     'message' => 'Admin with  was deleted',
                     'email' => $request->email
                 ]);
             }
-        }else{
+        } else {
             return new AdminResource([
                 'success'   => false,
                 'message' => 'Can\'t remove Admins , there is only one left',
@@ -45,38 +45,38 @@ class AdminController extends Controller
         }
     }
 
-    public function insert(Request $request){
-        
-        
-
+    public function insert(Request $request)
+    {
         $admin = new Admin;
         $admin->email = $request->email;
-        $admin->name =$request->name;
-        $admin->password =$request->password;
+        $admin->name = $request->name;
+        $admin->password = $request->password;
         \Log::info($admin);
-        
-        $saved  = $admin->save();
 
-        /*print_r($request->input('email'));
-        print_r($request->input('name'));
-        print_r($request->input('password'));*/
-        
-        if($saved){
+        try {
+            $saved  = $admin->save();
+        } catch (\Illuminate\Database\QueryException $e) {
+            return new AdminResource([
+                'success'   => false,
+                'message' => 'ERROR',
+                'exception' => $e
+            ]);
+        }
 
-        return new AdminResource([
-            'success'   => true,
-            'message' => 'the admin has been add successfully',
-            'admin' => $admin
-        ]);
-        }else{
+
+        if ($saved) {
+            return new AdminResource([
+                'success'   => true,
+                'message' => 'the admin has been add successfully',
+                'admin' => $admin
+            ]);
+        } else {
             return new AdminResource([
                 'success'   => false,
                 'message' => 'ERRO 500',
             ]);
-
         }
-	}
-
+    }
 }
 
 /*
@@ -101,3 +101,7 @@ public function store(Request $request)
 
 
 }*/
+
+/*print_r($request->input('email'));
+        print_r($request->input('name'));
+        print_r($request->input('password'));*/
