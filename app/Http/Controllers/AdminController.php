@@ -19,7 +19,7 @@ class AdminController extends Controller
 
         return new AdmimResource([
             'success'   => true,
-            'message' => 'listing Admins',
+            'message' => 'Listing Admins',
             'admins' => $admins
         ]);
 
@@ -32,13 +32,15 @@ class AdminController extends Controller
             if($delete_result > 0){
                 return new AdmimResource([
                     'success'   => true,
-                    'message' => 'Admin with '.$request->email.' was deleted'
+                    'message' => 'Admin with  was deleted',
+                    'email' => $request->email
                 ]);
             }
         }else{
             return new AdmimResource([
                 'success'   => false,
-                'message' => 'Can\'t remove Admins , there is only one left'
+                'message' => 'Can\'t remove Admins , there is only one left',
+                'email' => $request->email
             ]);
         }
     }
