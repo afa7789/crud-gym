@@ -24,13 +24,6 @@ Route::get('/', function () {
 
 Route::get('/listadmins', 'AdminController@listAdmins');
 
-<<<<<<< HEAD
-Route::get('/teste', 'AdminController@Teste');
+Route::get('/deleteadmins','AdminController@deleteAdmin');
 
-Route::post('/printa','AdminController@printatela');
-
-Route::get('/','AdminController@index');
 Route::post('/addadmin','AdminController@insert');
-=======
-Route::post('/coisinha','AdminController@insert');
->>>>>>> 82e194a84e5970e2ad5d7ca32d45224bc7800fd4
