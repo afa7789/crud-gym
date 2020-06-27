@@ -43,17 +43,19 @@ class AdminController extends Controller
         }
     }
 
-    public function insert(Request $str){
+    public function insert(Request $request){
         
         $admin = new Admin;
-        $admin->email = $str->email;
-        $admin->name =$str->name;
-        $admin->password =$str->password;
+        $admin->email = $request->email;
+        $admin->name =$request->name;
+        $admin->password =$request->password;
         $admin->save();
 
-        //print_r($str->input('id'));
+        print_r($request->input('email'));
+        print_r($request->input('name'));
+        print_r($request->input('password'));
 
-        return "oi deu certo";
+        return "\r\n\n\n OK";
 		
 	}
 
