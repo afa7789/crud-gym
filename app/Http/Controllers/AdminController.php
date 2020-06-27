@@ -17,7 +17,7 @@ class AdminController extends Controller
     {
         $admins = Admin::all();
 
-        return new AdmimResource([
+        return new AdminResource([
             'success'   => true,
             'message' => 'listing Admins',
             'admins' => $admins
@@ -30,13 +30,13 @@ class AdminController extends Controller
         if($admin_number >= 2){
             $delete_result = Admin::where('email',$request->email)->delete(); // Deve retornar um número;
             if($delete_result > 0){
-                return new AdmimResource([
+                return new AdminResource([
                     'success'   => true,
                     'message' => 'Admin with '.$request->email.' was deleted'
                 ]);
             }
         }else{
-            return new AdmimResource([
+            return new AdminResource([
                 'success'   => false,
                 'message' => 'Can\'t remove Admins , there is only one left'
             ]);
@@ -45,23 +45,48 @@ class AdminController extends Controller
 
     public function insert(Request $request){
         
+        
+
         $admin = new Admin;
         $admin->email = $request->email;
         $admin->name =$request->name;
         $admin->password =$request->password;
-        $admin->save();
+        \Log::info($admin);
+        
+        $saved  = $admin->save();
 
-        print_r($request->input('email'));
+        /*print_r($request->input('email'));
         print_r($request->input('name'));
-        print_r($request->input('password'));
+        print_r($request->input('password'));*/
+        
+        if($saved){
 
-        return "\r\n\n\n OK";
-		
+        return new AdminResource([
+            'success'   => true,
+            'message' => 'the admin has been add successfully',
+            'admin' => $admin
+        ]);
+        }else{
+            return new AdminResource([
+                'success'   => false,
+                'message' => 'ERRO 500',
+            ]);
+
+        }
 	}
 
 }
 
-/*public function store(Request $request)
+/*
+
+$saved = $myModel->save();
+
+if(!$saved){
+    App::abort(500, 'Error');
+}
+
+
+public function store(Request $request)
 {
     // Validate the request...
 
@@ -70,4 +95,7 @@ class AdminController extends Controller
     $flight->name = $request->name;
 
     $flight->save();
+
+
+
 }*/
