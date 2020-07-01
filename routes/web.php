@@ -27,3 +27,7 @@ Route::get('/listadmins', 'AdminController@listAdmins');
 Route::post('/deleteadmin','AdminController@deleteAdmin');
 
 Route::post('/addadmin','AdminController@insert');
+
+Route::post('/listusers','MemberController@ListUser');
+
+Route::get('/adduser','MemberController@insert');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Resources\AdminResource;
 use App\Http\Requests\DeleteAdminFormRequest;
+use App\Http\Requests\InsertAdminFormRequest;
 use App\Models\Admin;
 
 class AdminController extends Controller
@@ -45,7 +46,7 @@ class AdminController extends Controller
         }
     }
 
-    public function insert(Request $request)
+    public function insert(InsertAdminFormRequest $request)
     {
         $admin = new Admin;
         $admin->email = $request->email;
@@ -78,6 +79,8 @@ class AdminController extends Controller
         }
     }
 }
+
+    
 
 /*
 

@@ -19,4 +19,9 @@ class MemberController extends Controller
 
         return $members;
     }
+
+    public function insert(Request $request){
+        
+
+    }
 }
