@@ -17,7 +17,7 @@ class DeleteAdminFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class DeleteAdminFormRequest extends FormRequest
     {
 
         return [
-            'id' => ['required','email']
+            'email' => ['required','email']
         ];
       
     }

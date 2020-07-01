@@ -24,6 +24,6 @@ Route::get('/', function () {
 
 Route::get('/listadmins', 'AdminController@listAdmins');
 
-Route::get('/deleteadmins','AdminController@deleteAdmin');
+Route::post('/deleteadmin','AdminController@deleteAdmin');
 
 Route::post('/addadmin','AdminController@insert');
